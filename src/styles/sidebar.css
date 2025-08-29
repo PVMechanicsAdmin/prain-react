@@ -1,0 +1,177 @@
+/* Import original fonts from PRAIN */
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,500&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Satisfy');
+@import url('https://fonts.googleapis.com/css?family=Kaushan+Script&display=swap');
+
+/* Sidebar slide-out effect */
+.sidebar-container {
+  position: fixed;
+  left: 0;
+  top: 70px;
+  bottom: 80px;
+  z-index: 999;
+}
+
+.sidebar-mini {
+  width: 70px;
+  background: #667eea;
+  height: 100%;
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  transition-delay: 0.3s;
+}
+
+.sidebar-container.open .sidebar-mini {
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+}
+
+.sidebar-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: #fff;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 240px;
+  padding: 30px 20px;
+  transform: translateX(-100%);
+  transition: transform 0.5s cubic-bezier(0.55, 0, 0.1, 1) 0s;
+  transition-delay: 0.3s;
+}
+
+.sidebar-container.open .sidebar-full {
+  transform: translateX(0px);
+  transition-delay: 0.3s;
+}
+
+.sidebar-mini ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-mini li {
+  margin-bottom: 10px;
+}
+
+.sidebar-mini a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 50%;
+  margin: 0 auto;
+  transition: all 0.3s ease;
+}
+
+.sidebar-mini a:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.sidebar-full ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  padding-top: 10px;
+}
+
+.sidebar-full li {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+  text-transform: capitalize;
+  position: relative;
+}
+
+.sidebar-full li:last-child {
+  border-bottom: none;
+}
+
+.sidebar-full a {
+  color: #535165;
+  display: block;
+  font-size: 14px;
+  width: 100%;
+  padding: 10px 0;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-family: "Roboto", "Segoe Ui", sans-serif;
+}
+
+.sidebar-full a:hover {
+  color: #2a2a2a;
+}
+
+.sidebar-full a i {
+  color: #999;
+  margin-right: 10px;
+  width: 40px;
+  text-align: center;
+}
+
+.sidebar-full a:hover i {
+  color: #2a2a2a;
+}
+
+.menu-item-has-children::before {
+  content: "▼";
+  position: absolute;
+  right: 0;
+  top: 8px;
+  color: #999;
+  font-size: 12px;
+}
+
+.submenu {
+  list-style: none;
+  padding-left: 28px;
+  display: none;
+  margin-top: 10px;
+}
+
+.menu-item-has-children.open .submenu {
+  display: block;
+}
+
+.submenu li a {
+  color: #797979;
+  font-size: 13px;
+  font-weight: 400;
+  padding-left: 15px;
+  padding-right: 10px;
+  transition: all 0.2s linear 0s;
+}
+
+.submenu li a:hover {
+  padding-left: 16px;
+  color: #2a2a2a;
+}
+
+.submenu li a::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 19px;
+  width: 8px;
+  height: 2px;
+  background: #999;
+  border-radius: 1px;
+}
+
+/* Font families */
+body {
+  font-family: "Roboto", "Segoe Ui", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Roboto", "Segoe Ui", sans-serif;
+}
+
+.sidebar-title {
+  font-family: "Kaushan Script", cursive;
+  font-size: 20px;
+  color: #667eea;
+  margin-bottom: 20px;
+  text-align: center;
+}

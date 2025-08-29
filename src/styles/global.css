@@ -1,0 +1,63 @@
+/* Global styles for PRAIN React App */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: #f5f8fa;
+}
+
+.App {
+  min-height: 100vh;
+}
+
+.theme-layout {
+  min-height: 100vh;
+  position: relative;
+}
+
+.main-content {
+  display: flex;
+  min-height: calc(100vh - 140px); /* Account for header and footer */
+  margin-top: 70px; /* Account for fixed header */
+}
+
+.content-area {
+  flex: 1;
+  margin-left: 60px; /* Account for sidebar width */
+  padding: 20px;
+  background: #f5f8fa;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .content-area {
+    margin-left: 0;
+    padding: 10px;
+  }
+  
+  .main-content {
+    flex-direction: column;
+  }
+}
+
+/* Utility classes */
+.text-center {
+  text-align: center;
+}
+
+.mb-20 {
+  margin-bottom: 20px;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
